@@ -24,13 +24,13 @@ export default function Login() {
       toast.error(state.message);
     } else if (state.status === 200) {
       toast.success(state.message);
-    //   signIn("credentials", {
-    //     email: state.data?.email,
-    //     password: state.data?.password,
-    //     redirect: true,
-    //     callbackUrl: "/dashboard",
-    //   }
-    // );
+      signIn("credentials", {
+        email: state.data?.email,
+        password: state.data?.password,
+        redirect: true,
+        callbackUrl: "/dashboard",
+      }
+    );
     }
   }, [state]);
 
